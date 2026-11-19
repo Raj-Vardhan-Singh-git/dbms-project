@@ -1,0 +1,21 @@
+your-LOCAL-repository/
+├── .streamlit/
+│   └── secrets.toml # Make sure to gitignore this!
+└── streamlit_app.py
+
+[connections.my_database]
+    type="sql"
+    dialect="mysql"
+    username="xxx"
+    password="xxx"
+    host="example.com" # IP or URL
+    port=3306 # Port number
+    database="mydb" # Database name
+
+import streamlit as st
+
+conn = st.connection("my_database")
+df = conn.query("select * from my_table")
+st.dataframe(df)
+
+

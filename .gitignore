@@ -1,0 +1,19 @@
+# Python virtual environment
+Lib/
+Scripts/
+Include/
+etc/
+share/
+venv/
+.venv/
+pyvenv.cfg
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Streamlit secrets
+.streamlit/secrets.toml
+
+# Environment variables
+.env
